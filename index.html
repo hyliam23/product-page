@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Islander Slippers Product Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="logo.png" alt="logo" />
+        </div>
+      </nav>
+      <div class="category">
+        <img src="classic-cateogry.png" alt="category" />
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="product-images">
+        <img id="mainImage" src="islander-front.webp" alt="Islander Slippers" />
+        <div class="thumbnails">
+          <img
+            id="frontView"
+            src="islander-front.webp"
+            alt="Front View"
+            onclick="changeImage('islander-front.webp')"
+          />
+          <img
+            id="sideView"
+            src="islander-side.webp"
+            alt="Side View"
+            onclick="changeImage('islander-side.webp')"
+          />
+          <img
+            id="backView"
+            src="islander-back.webp"
+            alt="Back View"
+            onclick="changeImage('islander-back.webp')"
+          />
+        </div>
+      </div>
+      <div class="product-details">
+        <h1 class="product-title">Islander Slippers</h1>
+        <p class="product-price">₱25.99</p>
+
+        <div class="description">
+          <h3>Description</h3>
+          <p>
+            Islander 1020L (Marine Blue) Islander Slippers for Men / Slippers
+            for Women The classic Islander slipper was made for everyone. The
+            silhouette has always been designed with comfort in mind alongside a
+            style flexible for any fit.
+          </p>
+
+          <p>Materials:</p>
+          <p>Molded EVA & Natural Rubber sole Nylon Strap Heel Height: 0.5in</p>
+
+          <p>Shipping:</p>
+          <p>
+            Your orders are packed and scheduled for shipping within the same
+            day, or next day at the latest. Delivery lead time depends on the
+            location and may take between 3-10 days Once an order is picked up,
+            we unfortunately do not have control of when it will be delivered.
+            For any issues, feel free to send us a message and we'll do our best
+            to assist you.
+          </p>
+          <p>Return/Refund:</p>
+          <p>
+            As Shopee does not offer exchange, Items may be returned and
+            refunded within the allotted guarantee period. Send us a message for
+            any concerns. Please send us a photo of the item so we may assess
+            the reason for the return/refund request Sizing: Please refer to our
+            size chart. Measurements represented are from the product's heel to
+            toe For a wider fit, we recommend going one size up
+          </p>
+        </div>
+
+        <div class="options">
+          <div class="size-select">
+            <label>Size</label>
+            <div id="size-buttons"></div>
+          </div>
+
+          <div class="quantity">
+            <label for="quantity">Quantity</label>
+            <div class="quantity-buttons">
+              <button
+                class="minus"
+                aria-label="Decrease"
+                onclick="changeQuantity(-1)"
+              >
+                &minus;
+              </button>
+              <input
+                class="input-box"
+                type="number"
+                id="quantity"
+                value="1"
+                min="1"
+                readonly
+              />
+              <button
+                class="plus"
+                aria-label="Increase"
+                onclick="changeQuantity(1)"
+              >
+                &plus;
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="add-to-cart">
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js" />
+  </body>
+</html>
